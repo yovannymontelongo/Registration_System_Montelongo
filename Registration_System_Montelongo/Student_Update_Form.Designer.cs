@@ -45,6 +45,7 @@
             this.exitButton.TabIndex = 16;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // submitButton
             // 
@@ -54,6 +55,7 @@
             this.submitButton.TabIndex = 14;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // degreeTextBox
             // 
@@ -140,6 +142,7 @@
             this.studentComboBox.Name = "studentComboBox";
             this.studentComboBox.Size = new System.Drawing.Size(160, 21);
             this.studentComboBox.TabIndex = 30;
+            this.studentComboBox.SelectedIndexChanged += new System.EventHandler(this.studentComboBox_SelectedIndexChanged);
             // 
             // Student_Update_Form
             // 

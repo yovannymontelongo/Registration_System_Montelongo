@@ -1,4 +1,4 @@
-Insert Query Templates
+Insert Query Templates:
 
 insert info into the student table:
 INSERT INTO `student_table` (`student_id`, `fname`, `lname`, `major`, `degree`) VALUES (NULL, 'Yovanny', 'Montelongo', 'Computer Science', 'B.S.');
@@ -11,4 +11,6 @@ INSERT INTO `section_table` (`section_id`, `teacher_id`, `course_name`, `section
 
 insert info into the registration table:
 INSERT INTO `registration_table` (`registration_id`, `student_id`, `section_id`, `date_registered`, `grade_earned`) VALUES (NULL, '1', '1', CURRENT_TIMESTAMP, 'A');
+
+Update Query Templates: 
 

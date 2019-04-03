@@ -42,5 +42,10 @@ namespace Registration_System_Montelongo {
             Section_Insert_Form sectionForm = new Section_Insert_Form();
             sectionForm.ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e) {
+            Student_Update_Form student_Update_Form = new Student_Update_Form();
+            student_Update_Form.ShowDialog();
+        }
     }
 }

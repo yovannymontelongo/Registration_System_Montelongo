@@ -10,22 +10,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Registration_System_Montelongo {
+    
     public partial class Student_Update_Form : Form {
+        
         public Student_Update_Form() {
             InitializeComponent();
 
             using (MySqlConnection conn = new MySqlConnection("server=localhost;database=registration_db;user=root")) {
                 conn.Open();
 
-                string queryStudent = "SELECT lname, fname, student_id FROM student_table Order by lname, fname ASC;";
-                string querySection = "SELECT section_id, teacher_id, course_name, section, days, start_time, end_time FROM section_table Order by course_name, section ASC;";
-                MessageBox.Show(queryStudent);
-                MySqlCommand cmd = new MySqlCommand(queryStudent, conn);
-                MySqlCommand cmd2 = new MySqlCommand(querySection, conn);
+                string query = "SELECT lname, fname, student_id, major, degree FROM student_table Order by lname, fname ASC;";
+                MessageBox.Show(query);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
-
                 DataTable tableStudent = new DataTable();
-                DataTable tableSection = new DataTable();
 
                 tableStudent.Load(reader);
 
@@ -33,19 +31,84 @@ namespace Registration_System_Montelongo {
                     studentComboBox.Items.Add(tableStudent.Rows[i]["student_id"] + " " + tableStudent.Rows[i]["lname"] + "," + tableStudent.Rows[i]["fname"]);
                 }
 
-
-                reader = cmd2.ExecuteReader();
-                tableSection.Load(reader);
-
-                for (int i = 0; i < tableSection.Rows.Count; i++) {
-                    sectionComboBox.Items.Add(tableSection.Rows[i]["section_id"] + " : " + tableSection.Rows[i]["course_name"] + " " + tableSection.Rows[i]["section"]);
-                }
-
                 reader.Close();
                 conn.Close();
 
             }
 
+        }
+
+        private void studentComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+
+            using (MySqlConnection conn = new MySqlConnection("server=localhost;database=registration_db;user=root")) {
+
+                string studentselectionid = studentComboBox.Text;
+                string[] words = studentselectionid.Split(' ');
+                string student_id_num = words[0]; //get the id from the split string. 
+
+
+                conn.Open();
+
+                string query = $"SELECT * FROM student_table WHERE student_id = '{student_id_num}';";
+                MessageBox.Show(query);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                DataTable table = new DataTable();
+
+                table.Load(reader);
+
+                for (int i = 0; i < table.Rows.Count; i++) {
+                    //  Console.WriteLine(table.Rows[i]["name"]);
+                    MessageBox.Show("Adding Student ID: " + table.Rows[i]["student_id"]);
+                    fnameTextBox.Text = table.Rows[i]["fname"].ToString();
+                    lnameTextBox.Text = table.Rows[i]["lname"].ToString();
+                    majorTextBox.Text = table.Rows[i]["major"].ToString();
+                    degreeTextBox.Text = table.Rows[i]["degree"].ToString();
+                }
+
+
+                conn.Close();
+            }
+
+        }
+
+        private void submitButton_Click(object sender, EventArgs e) {
+
+            using (MySqlConnection conn = new MySqlConnection("server=localhost;database=registration_db;user=root")) {
+
+                string studentselectionid = studentComboBox.Text;
+                string[] words = studentselectionid.Split(' ');
+                string studentID = words[0]; //get the id from the split string. 
+
+                conn.Open();
+
+                string query = $"UPDATE `student_table` SET `fname` = '{fnameTextBox.Text}', `lname` = '{lnameTextBox.Text}', `major` = '{majorTextBox.Text}', `degree` = '{degreeTextBox.Text}' WHERE `student_table`.`student_id` = {studentID};";
+                MessageBox.Show(query);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                DataTable table = new DataTable();
+
+                table.Load(reader);
+
+                for (int i = 0; i < table.Rows.Count; i++) {
+                    //  Console.WriteLine(table.Rows[i]["name"]);
+                    MessageBox.Show("Adding Student ID: " + table.Rows[i]["student_id"]);
+                    fnameTextBox.Text = table.Rows[i]["fname"].ToString();
+                    lnameTextBox.Text = table.Rows[i]["lname"].ToString();
+                    majorTextBox.Text = table.Rows[i]["major"].ToString();
+                    degreeTextBox.Text = table.Rows[i]["degree"].ToString();
+                }
+
+                conn.Close();
+            }
+
+            this.Close();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e) {
+            Close();
         }
     }
 }
