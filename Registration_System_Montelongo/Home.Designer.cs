@@ -34,6 +34,10 @@
             this.addSectionButton = new System.Windows.Forms.Button();
             this.updateStudentButton = new System.Windows.Forms.Button();
             this.updateTeacherButton = new System.Windows.Forms.Button();
+            this.sectionUpdateButton = new System.Windows.Forms.Button();
+            this.deleteStudentButton = new System.Windows.Forms.Button();
+            this.deleteTeacherButton = new System.Windows.Forms.Button();
+            this.deleteSectionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +52,7 @@
             // 
             // addStudentButton
             // 
-            this.addStudentButton.Location = new System.Drawing.Point(165, 77);
+            this.addStudentButton.Location = new System.Drawing.Point(108, 77);
             this.addStudentButton.Name = "addStudentButton";
             this.addStudentButton.Size = new System.Drawing.Size(75, 23);
             this.addStudentButton.TabIndex = 1;
@@ -58,7 +62,7 @@
             // 
             // addTeacherButton
             // 
-            this.addTeacherButton.Location = new System.Drawing.Point(165, 106);
+            this.addTeacherButton.Location = new System.Drawing.Point(108, 106);
             this.addTeacherButton.Name = "addTeacherButton";
             this.addTeacherButton.Size = new System.Drawing.Size(75, 23);
             this.addTeacherButton.TabIndex = 2;
@@ -68,7 +72,7 @@
             // 
             // registerStudentButton
             // 
-            this.registerStudentButton.Location = new System.Drawing.Point(327, 77);
+            this.registerStudentButton.Location = new System.Drawing.Point(270, 77);
             this.registerStudentButton.Name = "registerStudentButton";
             this.registerStudentButton.Size = new System.Drawing.Size(75, 23);
             this.registerStudentButton.TabIndex = 3;
@@ -80,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 77);
+            this.label2.Location = new System.Drawing.Point(32, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 4;
@@ -90,7 +94,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(88, 106);
+            this.label3.Location = new System.Drawing.Point(31, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 5;
@@ -110,7 +114,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(92, 135);
+            this.label5.Location = new System.Drawing.Point(35, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 9;
@@ -119,7 +123,7 @@
             // 
             // addSectionButton
             // 
-            this.addSectionButton.Location = new System.Drawing.Point(165, 135);
+            this.addSectionButton.Location = new System.Drawing.Point(108, 135);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(75, 23);
             this.addSectionButton.TabIndex = 8;
@@ -129,7 +133,7 @@
             // 
             // updateStudentButton
             // 
-            this.updateStudentButton.Location = new System.Drawing.Point(246, 77);
+            this.updateStudentButton.Location = new System.Drawing.Point(189, 77);
             this.updateStudentButton.Name = "updateStudentButton";
             this.updateStudentButton.Size = new System.Drawing.Size(75, 23);
             this.updateStudentButton.TabIndex = 10;
@@ -139,7 +143,7 @@
             // 
             // updateTeacherButton
             // 
-            this.updateTeacherButton.Location = new System.Drawing.Point(246, 106);
+            this.updateTeacherButton.Location = new System.Drawing.Point(189, 106);
             this.updateTeacherButton.Name = "updateTeacherButton";
             this.updateTeacherButton.Size = new System.Drawing.Size(75, 23);
             this.updateTeacherButton.TabIndex = 12;
@@ -147,11 +151,52 @@
             this.updateTeacherButton.UseVisualStyleBackColor = true;
             this.updateTeacherButton.Click += new System.EventHandler(this.button2_Click);
             // 
+            // sectionUpdateButton
+            // 
+            this.sectionUpdateButton.Location = new System.Drawing.Point(189, 135);
+            this.sectionUpdateButton.Name = "sectionUpdateButton";
+            this.sectionUpdateButton.Size = new System.Drawing.Size(75, 23);
+            this.sectionUpdateButton.TabIndex = 13;
+            this.sectionUpdateButton.Text = "Update";
+            this.sectionUpdateButton.UseVisualStyleBackColor = true;
+            this.sectionUpdateButton.Click += new System.EventHandler(this.sectionUpdateButton_Click);
+            // 
+            // deleteStudentButton
+            // 
+            this.deleteStudentButton.Location = new System.Drawing.Point(351, 77);
+            this.deleteStudentButton.Name = "deleteStudentButton";
+            this.deleteStudentButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteStudentButton.TabIndex = 14;
+            this.deleteStudentButton.Text = "Delete";
+            this.deleteStudentButton.UseVisualStyleBackColor = true;
+            // 
+            // deleteTeacherButton
+            // 
+            this.deleteTeacherButton.Location = new System.Drawing.Point(351, 106);
+            this.deleteTeacherButton.Name = "deleteTeacherButton";
+            this.deleteTeacherButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteTeacherButton.TabIndex = 15;
+            this.deleteTeacherButton.Text = "Delete";
+            this.deleteTeacherButton.UseVisualStyleBackColor = true;
+            // 
+            // deleteSectionButton
+            // 
+            this.deleteSectionButton.Location = new System.Drawing.Point(351, 135);
+            this.deleteSectionButton.Name = "deleteSectionButton";
+            this.deleteSectionButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteSectionButton.TabIndex = 16;
+            this.deleteSectionButton.Text = "Delete";
+            this.deleteSectionButton.UseVisualStyleBackColor = true;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 341);
+            this.Controls.Add(this.deleteSectionButton);
+            this.Controls.Add(this.deleteTeacherButton);
+            this.Controls.Add(this.deleteStudentButton);
+            this.Controls.Add(this.sectionUpdateButton);
             this.Controls.Add(this.updateTeacherButton);
             this.Controls.Add(this.updateStudentButton);
             this.Controls.Add(this.label5);
@@ -183,5 +228,9 @@
         private System.Windows.Forms.Button addSectionButton;
         private System.Windows.Forms.Button updateStudentButton;
         private System.Windows.Forms.Button updateTeacherButton;
+        private System.Windows.Forms.Button sectionUpdateButton;
+        private System.Windows.Forms.Button deleteStudentButton;
+        private System.Windows.Forms.Button deleteTeacherButton;
+        private System.Windows.Forms.Button deleteSectionButton;
     }
 }

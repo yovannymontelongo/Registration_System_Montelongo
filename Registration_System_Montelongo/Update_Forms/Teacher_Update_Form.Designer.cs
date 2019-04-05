@@ -35,6 +35,7 @@
             this.lnameLabel = new System.Windows.Forms.Label();
             this.fnameTextBox = new System.Windows.Forms.TextBox();
             this.fnameLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // teacherComboBox
@@ -77,7 +78,7 @@
             // 
             this.rankLabel.AutoSize = true;
             this.rankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rankLabel.Location = new System.Drawing.Point(35, 188);
+            this.rankLabel.Location = new System.Drawing.Point(36, 188);
             this.rankLabel.Name = "rankLabel";
             this.rankLabel.Size = new System.Drawing.Size(40, 16);
             this.rankLabel.TabIndex = 41;
@@ -94,7 +95,7 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(35, 162);
+            this.titleLabel.Location = new System.Drawing.Point(36, 162);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(34, 16);
             this.titleLabel.TabIndex = 40;
@@ -121,7 +122,7 @@
             // 
             this.lnameLabel.AutoSize = true;
             this.lnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnameLabel.Location = new System.Drawing.Point(35, 136);
+            this.lnameLabel.Location = new System.Drawing.Point(36, 136);
             this.lnameLabel.Name = "lnameLabel";
             this.lnameLabel.Size = new System.Drawing.Size(73, 16);
             this.lnameLabel.TabIndex = 35;
@@ -138,17 +139,28 @@
             // 
             this.fnameLabel.AutoSize = true;
             this.fnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fnameLabel.Location = new System.Drawing.Point(35, 110);
+            this.fnameLabel.Location = new System.Drawing.Point(36, 110);
             this.fnameLabel.Name = "fnameLabel";
             this.fnameLabel.Size = new System.Drawing.Size(73, 16);
             this.fnameLabel.TabIndex = 32;
             this.fnameLabel.Text = "First Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(36, 83);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 16);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "Teacher ID";
             // 
             // Teacher_Update_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 321);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.teacherComboBox);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.submitButton);
@@ -182,5 +194,6 @@
         private System.Windows.Forms.Label lnameLabel;
         private System.Windows.Forms.TextBox fnameTextBox;
         private System.Windows.Forms.Label fnameLabel;
+        private System.Windows.Forms.Label label4;
     }
 }

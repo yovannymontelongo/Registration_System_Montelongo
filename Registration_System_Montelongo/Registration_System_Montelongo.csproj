@@ -113,36 +113,42 @@
     <Compile Include="Register_Form.Designer.cs">
       <DependentUpon>Register_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Section_Insert_Form.cs">
+    <Compile Include="Insert_Forms\Section_Insert_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Section_Insert_Form.Designer.cs">
+    <Compile Include="Insert_Forms\Section_Insert_Form.Designer.cs">
       <DependentUpon>Section_Insert_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student_Insert_Form.cs">
+    <Compile Include="Update_Forms\Section_Update_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student_Insert_Form.Designer.cs">
+    <Compile Include="Update_Forms\Section_Update_Form.Designer.cs">
+      <DependentUpon>Section_Update_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insert_Forms\Student_Insert_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insert_Forms\Student_Insert_Form.Designer.cs">
       <DependentUpon>Student_Insert_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student_Update_Form.cs">
+    <Compile Include="Update_Forms\Student_Update_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student_Update_Form.Designer.cs">
+    <Compile Include="Update_Forms\Student_Update_Form.Designer.cs">
       <DependentUpon>Student_Update_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Teacher_Insert_Form.cs">
+    <Compile Include="Insert_Forms\Teacher_Insert_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Teacher_Insert_Form.Designer.cs">
+    <Compile Include="Insert_Forms\Teacher_Insert_Form.Designer.cs">
       <DependentUpon>Teacher_Insert_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Teacher_Update_Form.cs">
+    <Compile Include="Update_Forms\Teacher_Update_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Teacher_Update_Form.Designer.cs">
+    <Compile Include="Update_Forms\Teacher_Update_Form.Designer.cs">
       <DependentUpon>Teacher_Update_Form.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Home.resx">
@@ -161,19 +167,22 @@
     <EmbeddedResource Include="Register_Form.resx">
       <DependentUpon>Register_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Section_Insert_Form.resx">
+    <EmbeddedResource Include="Insert_Forms\Section_Insert_Form.resx">
       <DependentUpon>Section_Insert_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student_Insert_Form.resx">
+    <EmbeddedResource Include="Insert_Forms\Student_Insert_Form.resx">
       <DependentUpon>Student_Insert_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student_Update_Form.resx">
+    <EmbeddedResource Include="Update_Forms\Section_Update_Form.resx">
+      <DependentUpon>Section_Update_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Forms\Student_Update_Form.resx">
       <DependentUpon>Student_Update_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Teacher_Insert_Form.resx">
+    <EmbeddedResource Include="Insert_Forms\Teacher_Insert_Form.resx">
       <DependentUpon>Teacher_Insert_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Teacher_Update_Form.resx">
+    <EmbeddedResource Include="Update_Forms\Teacher_Update_Form.resx">
       <DependentUpon>Teacher_Update_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

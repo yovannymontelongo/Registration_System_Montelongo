@@ -26,7 +26,7 @@ namespace Registration_System_Montelongo {
                 tableTeacher.Load(reader);
 
                 for (int i = 0; i < tableTeacher.Rows.Count; i++) {
-                    teacherComboBox.Items.Add(tableTeacher.Rows[i]["teacher_id"] + " " + tableTeacher.Rows[i]["lname"] + "," + tableTeacher.Rows[i]["fname"]);
+                    teacherComboBox.Items.Add(tableTeacher.Rows[i]["teacher_id"] + " " + tableTeacher.Rows[i]["lname"] + " , " + tableTeacher.Rows[i]["fname"]);
                 }
 
                 reader.Close();
