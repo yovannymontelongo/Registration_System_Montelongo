@@ -14,3 +14,4 @@ INSERT INTO `registration_table` (`registration_id`, `student_id`, `section_id`,
 
 Update Query Templates: 
 
+UPDATE `student_table` SET `fname` = '', `lname` = '', `major` = '', `degree` = '' WHERE `student_table`.`student_id` = 

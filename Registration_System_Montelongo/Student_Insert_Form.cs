@@ -26,16 +26,15 @@ namespace Registration_System_Montelongo {
                 conn.Open();
 
                 string query = $"INSERT INTO `student_table` (`student_id`, `fname`, `lname`, `major`, `degree`) VALUES (NULL, '{fname}', '{lname}', '{major}', '{degree}');";
-                MessageBox.Show(query);
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 int numRowsAffected = cmd.ExecuteNonQuery();
                 long lastInserted = cmd.LastInsertedId;
 
-                if(numRowsAffected >= 1) {
-                    MessageBox.Show("Rows: " + numRowsAffected + ". ID entered: " + lastInserted);
-                } else {
-                    MessageBox.Show("Error in insert query");
-                }
+                //if(numRowsAffected >= 1) {
+                //    MessageBox.Show("Rows: " + numRowsAffected + ". ID entered: " + lastInserted);
+                //} else {
+                //    MessageBox.Show("Error in insert query");
+                //}
                 
                 conn.Close();
             }

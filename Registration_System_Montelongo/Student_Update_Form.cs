@@ -84,7 +84,6 @@ namespace Registration_System_Montelongo {
                 conn.Open();
 
                 string query = $"UPDATE `student_table` SET `fname` = '{fnameTextBox.Text}', `lname` = '{lnameTextBox.Text}', `major` = '{majorTextBox.Text}', `degree` = '{degreeTextBox.Text}' WHERE `student_table`.`student_id` = {studentID};";
-                MessageBox.Show(query);
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -94,7 +93,7 @@ namespace Registration_System_Montelongo {
 
                 for (int i = 0; i < table.Rows.Count; i++) {
                     //  Console.WriteLine(table.Rows[i]["name"]);
-                    MessageBox.Show("Adding Student ID: " + table.Rows[i]["student_id"]);
+                    //MessageBox.Show("Adding Student ID: " + table.Rows[i]["student_id"]);
                     fnameTextBox.Text = table.Rows[i]["fname"].ToString();
                     lnameTextBox.Text = table.Rows[i]["lname"].ToString();
                     majorTextBox.Text = table.Rows[i]["major"].ToString();

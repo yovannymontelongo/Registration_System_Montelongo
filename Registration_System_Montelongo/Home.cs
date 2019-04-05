@@ -15,8 +15,8 @@ namespace Registration_System_Montelongo {
         }
 
         private void addStudentButton_Click(object sender, EventArgs e) {
-            Home homeForm = new Home();
-            homeForm.ShowDialog();
+            Student_Insert_Form student_Insert_Form = new Student_Insert_Form();
+            student_Insert_Form.ShowDialog();
 
         }
 

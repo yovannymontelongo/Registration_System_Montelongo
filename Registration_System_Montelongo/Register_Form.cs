@@ -19,7 +19,6 @@ namespace Registration_System_Montelongo {
 
                 string queryStudent = "SELECT lname, fname, student_id FROM student_table Order by lname, fname ASC;";
                 string querySection = "SELECT section_id, teacher_id, course_name, section, days, start_time, end_time FROM section_table Order by course_name, section ASC;";
-                MessageBox.Show(queryStudent);
                 MySqlCommand cmd = new MySqlCommand(queryStudent, conn);
                 MySqlCommand cmd2 = new MySqlCommand(querySection, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -65,7 +64,6 @@ namespace Registration_System_Montelongo {
                 conn.Open();
 
                 string query = $"INSERT INTO `registration_table` (`registration_id`, `student_id`, `section_id`, `date_registered`, `grade_earned`) VALUES (NULL, '{studentID}', '{sectionID}', CURRENT_TIMESTAMP, NULL);";
-                MessageBox.Show(query);
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
             }
