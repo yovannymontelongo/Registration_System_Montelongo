@@ -26,22 +26,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.addStudentButton = new System.Windows.Forms.Button();
             this.addTeacherButton = new System.Windows.Forms.Button();
-            this.registerButton = new System.Windows.Forms.Button();
+            this.registerStudentButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.addSectionButton = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.updateStudentButton = new System.Windows.Forms.Button();
+            this.updateTeacherButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 25);
+            this.label1.Location = new System.Drawing.Point(49, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(380, 33);
             this.label1.TabIndex = 0;
@@ -49,7 +48,7 @@
             // 
             // addStudentButton
             // 
-            this.addStudentButton.Location = new System.Drawing.Point(244, 90);
+            this.addStudentButton.Location = new System.Drawing.Point(165, 77);
             this.addStudentButton.Name = "addStudentButton";
             this.addStudentButton.Size = new System.Drawing.Size(75, 23);
             this.addStudentButton.TabIndex = 1;
@@ -59,7 +58,7 @@
             // 
             // addTeacherButton
             // 
-            this.addTeacherButton.Location = new System.Drawing.Point(244, 119);
+            this.addTeacherButton.Location = new System.Drawing.Point(165, 106);
             this.addTeacherButton.Name = "addTeacherButton";
             this.addTeacherButton.Size = new System.Drawing.Size(75, 23);
             this.addTeacherButton.TabIndex = 2;
@@ -67,42 +66,35 @@
             this.addTeacherButton.UseVisualStyleBackColor = true;
             this.addTeacherButton.Click += new System.EventHandler(this.addTeacherButton_Click);
             // 
-            // registerButton
+            // registerStudentButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(244, 177);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(75, 23);
-            this.registerButton.TabIndex = 3;
-            this.registerButton.Text = "Register";
-            this.registerButton.UseVisualStyleBackColor = true;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            this.registerStudentButton.Location = new System.Drawing.Point(327, 77);
+            this.registerStudentButton.Name = "registerStudentButton";
+            this.registerStudentButton.Size = new System.Drawing.Size(75, 23);
+            this.registerStudentButton.TabIndex = 3;
+            this.registerStudentButton.Text = "Register";
+            this.registerStudentButton.UseVisualStyleBackColor = true;
+            this.registerStudentButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(117, 95);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Add Student";
+            this.label2.Text = "Student:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(117, 124);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(88, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Add Teacher";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(117, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Register for Class";
+            this.label3.Text = "Teacher:";
             // 
             // exitButton
             // 
@@ -117,16 +109,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(117, 153);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(92, 135);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Add Section";
+            this.label5.Text = "Section:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // addSectionButton
             // 
-            this.addSectionButton.Location = new System.Drawing.Point(244, 148);
+            this.addSectionButton.Location = new System.Drawing.Point(165, 135);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(75, 23);
             this.addSectionButton.TabIndex = 8;
@@ -134,39 +127,39 @@
             this.addSectionButton.UseVisualStyleBackColor = true;
             this.addSectionButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label6
+            // updateStudentButton
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(117, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Update Student";
+            this.updateStudentButton.Location = new System.Drawing.Point(246, 77);
+            this.updateStudentButton.Name = "updateStudentButton";
+            this.updateStudentButton.Size = new System.Drawing.Size(75, 23);
+            this.updateStudentButton.TabIndex = 10;
+            this.updateStudentButton.Text = "Update";
+            this.updateStudentButton.UseVisualStyleBackColor = true;
+            this.updateStudentButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button1
+            // updateTeacherButton
             // 
-            this.button1.Location = new System.Drawing.Point(244, 206);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.updateTeacherButton.Location = new System.Drawing.Point(246, 106);
+            this.updateTeacherButton.Name = "updateTeacherButton";
+            this.updateTeacherButton.Size = new System.Drawing.Size(75, 23);
+            this.updateTeacherButton.TabIndex = 12;
+            this.updateTeacherButton.Text = "Update";
+            this.updateTeacherButton.UseVisualStyleBackColor = true;
+            this.updateTeacherButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 382);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(464, 341);
+            this.Controls.Add(this.updateTeacherButton);
+            this.Controls.Add(this.updateStudentButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.addSectionButton);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.registerButton);
+            this.Controls.Add(this.registerStudentButton);
             this.Controls.Add(this.addTeacherButton);
             this.Controls.Add(this.addStudentButton);
             this.Controls.Add(this.label1);
@@ -182,14 +175,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addStudentButton;
         private System.Windows.Forms.Button addTeacherButton;
-        private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.Button registerStudentButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button addSectionButton;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button updateStudentButton;
+        private System.Windows.Forms.Button updateTeacherButton;
     }
 }

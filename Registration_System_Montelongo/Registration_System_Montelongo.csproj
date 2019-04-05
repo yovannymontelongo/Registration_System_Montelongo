@@ -139,6 +139,12 @@
     <Compile Include="Teacher_Insert_Form.Designer.cs">
       <DependentUpon>Teacher_Insert_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher_Update_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher_Update_Form.Designer.cs">
+      <DependentUpon>Teacher_Update_Form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher_Insert_Form.resx">
       <DependentUpon>Teacher_Insert_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher_Update_Form.resx">
+      <DependentUpon>Teacher_Update_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
